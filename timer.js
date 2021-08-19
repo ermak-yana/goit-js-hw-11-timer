@@ -1,12 +1,13 @@
 
-
-
-
-function Logger () {
+function logger () {
     // console.log("start");
 };
-
-function timerStart () {setInterval(Logger, 1000)} ;
+let id = null;
+function timerStart () {
+    startData = Date.now();
+    id = setInterval(logger, 1000);
+   
+} ;
 
 window.addEventListener('DOMContentLoaded', timerStart);
 
